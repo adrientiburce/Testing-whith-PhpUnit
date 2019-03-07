@@ -4,6 +4,9 @@ namespace App\Tests;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
+/**
+ * @group old-test
+ */
 class BowlingTest extends WebTestCase
 {
     /**
@@ -25,7 +28,7 @@ class BowlingTest extends WebTestCase
                 $res += $A[$i] + $A[$i+2] + $A[$i+3];
             }
             elseif($this->isSpare($A, $i)){
-                $res += $A[$i] + $A[$i+1] + $A[$i+2];
+                $res += $A[$i] + $A[$i+1]+ $A[$i+2] ;
             }
             else $res += $A[$i] + $A[$i+1];
             $i += 2;
